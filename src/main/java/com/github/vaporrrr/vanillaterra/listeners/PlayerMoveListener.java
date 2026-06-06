@@ -16,7 +16,7 @@ public class PlayerMoveListener implements Listener {
         }
         Player player = event.getPlayer();
         int heightOffset = VanillaTerra.config().getInt("HeightOffset", 0);
-        int height = (int) Math.floor(player.getLocation().getY()) + heightOffset;
+        int height = (int) Math.floor(player.getLocation().getY()) - heightOffset;
         player.sendActionBar(Component.text(height + "m"));
     }
 }

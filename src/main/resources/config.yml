@@ -4,8 +4,9 @@ MapLinks:
   - Yandex
   - OSM
 
-# Whether to show the player's height (Y-level + HeightOffset) in the action bar
-ShowHeightInActionBar: true
+# Whether to show the player's height in the action bar
+ShowHeightInActionBar: false
 
 # Offset added to the height display and when a player specifies a height in /tpll command
+# With an offset of -1024, the true zero altitude on server will be -1024.
 HeightOffset: 0
