@@ -10,12 +10,6 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class VanillaTerra extends JavaPlugin {
-    private final FileConfiguration config;
-
-    public VanillaTerra() {
-        this.config = getConfig();
-    }
-
     @Override
     @SuppressWarnings("ConstantConditions")
     public void onEnable() {
@@ -38,6 +32,6 @@ public class VanillaTerra extends JavaPlugin {
     }
 
     public static FileConfiguration config() {
-        return getPlugin().config;
+        return getPlugin().getConfig();
     }
 }

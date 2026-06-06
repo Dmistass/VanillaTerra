@@ -3,3 +3,6 @@ MapLinks:
   - Google
   - Yandex
   - OSM
+
+# Offset added to the height when a player specifies a height in /tpll command
+HeightOffset: 0

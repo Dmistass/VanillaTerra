@@ -93,6 +93,8 @@ public class Tpll implements CommandExecutor {
                     return true;
                 }
                 altitude = highest;
+            } else {
+                altitude += VanillaTerra.config().getInt("HeightOffset", 0);
             }
             TextComponent textComponent = Component.text("Teleporting to ")
                     .color(NamedTextColor.GRAY)
