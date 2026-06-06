@@ -1,15 +1,32 @@
-# VanillaTerra (1.18)
+# VanillaTerra (1.21+)
 [![community](https://go.buildtheearth.net/community-shield)](https://github.com/buildtheearth) [![](https://img.shields.io/github/release/vaporrrr/VanillaTerra.svg)](https://github.com/vaporrrr/VanillaTerra/releases/latest "Latest release")
 
-For use on a 1.18 BTE vanilla Minecraft server.  
-Used on the BTE NE 1.18 vanilla Minecraft server.  
+For use on a 1.21+ BTE vanilla Minecraft server.  
+Used on the TeamCIS Minecraft server.  
 Uses [terraminusminus](https://github.com/SmylerMC/terraminusminus).
 
-(Currently only supports BTE default settings/projection)
+Supports only BTE default settings/projection.  
+Supports: [Spigot](https://www.spigotmc.org/) / [PaperMC](https://papermc.io/) / downstream forks.  
 
-## Requires
+Plugin tested on: 1.21.4, 1.21.8  
+(Should works on any version higher 1.21)  
 
-[Spigot](https://www.spigotmc.org/) / [PaperMC](https://papermc.io/) / downstream forks.
+## Config:
+``` yml
+# Map services used when a player uses command '/where' Options are Google, Yandex, OSM
+MapLinks:
+  - Google
+  - Yandex
+  - OSM
+
+# Whether to show the player's height in the action bar
+ShowHeightInActionBar: false
+
+# Offset added to the height display and when a player specifies a height in /tpll command
+# With an offset of -1024, the true zero altitude on server will be -1024.
+HeightOffset: 0
+```
+
 
 ## Commands:
 ### /tpll
