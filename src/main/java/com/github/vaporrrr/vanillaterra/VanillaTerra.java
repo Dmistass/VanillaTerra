@@ -4,19 +4,16 @@ import com.github.vaporrrr.vanillaterra.commands.Distortion;
 import com.github.vaporrrr.vanillaterra.commands.Reload;
 import com.github.vaporrrr.vanillaterra.commands.Tpll;
 import com.github.vaporrrr.vanillaterra.commands.Where;
-import net.kyori.adventure.platform.bukkit.BukkitAudiences;
-import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.Component;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class VanillaTerra extends JavaPlugin {
     private final FileConfiguration config;
-    private final BukkitAudiences adventure;
 
     public VanillaTerra() {
         this.config = getConfig();
-        this.adventure = BukkitAudiences.create(this);
     }
 
     @Override
@@ -32,8 +29,8 @@ public class VanillaTerra extends JavaPlugin {
         saveConfig();
     }
 
-    public static void sendComponent(CommandSender commandSender, TextComponent textComponent) {
-        getPlugin().adventure.sender(commandSender).sendMessage(textComponent);
+    public static void sendComponent(CommandSender commandSender, Component component) {
+        commandSender.sendMessage(component);
     }
 
     public static VanillaTerra getPlugin() {
