@@ -1,5 +1,5 @@
 # VanillaTerra (1.21+)
-[![community](https://go.buildtheearth.net/community-shield)](https://github.com/buildtheearth) [![](https://img.shields.io/github/release/vaporrrr/VanillaTerra.svg)](https://github.com/vaporrrr/VanillaTerra/releases/latest "Latest release")
+[![community](https://go.buildtheearth.net/community-shield)](https://github.com/buildtheearth) [![](https://img.shields.io/github/release/Dmistass/VanillaTerra.svg)](https://github.com/Dmistass/VanillaTerra/releases/latest "Latest release")
 
 For use on a 1.21+ BTE vanilla Minecraft server.  
 Used on the TeamCIS Minecraft server.  
