@@ -58,7 +58,7 @@ public class Where implements CommandExecutor {
                 textComponent = textComponent.append(Component.text("[Google Maps] ", NamedTextColor.YELLOW).clickEvent(ClickEvent.openUrl("https://www.google.com/maps/search/?api=1&query=" + lat + "," + lng)).decoration(TextDecoration.BOLD, true));
             }
             if (mapLinks.contains("Yandex")) {
-                textComponent = textComponent.append(Component.text("[Yandex Maps] ", NamedTextColor.YELLOW).clickEvent(ClickEvent.openUrl("https://yandex.com/maps/?ll=" + lng + "%2C" + lat + "&z=19")).decoration(TextDecoration.BOLD, true));
+                textComponent = textComponent.append(Component.text("[Yandex Maps] ", NamedTextColor.YELLOW).clickEvent(ClickEvent.openUrl("https://yandex.com/maps/?ll=" + lng + "%2C" + lat + "&mode=whatshere&whatshere%5Bpoint%5D=" + lng + "%2C" + lat + "&whatshere%5Bzoom%5D=19&z=19")).decoration(TextDecoration.BOLD, true));
             }
             if (mapLinks.contains("OSM")) {
                 textComponent = textComponent.append(Component.text("[OSM] ", NamedTextColor.YELLOW).clickEvent(ClickEvent.openUrl("https://www.openstreetmap.org/#map=19/" + lat + "/" + lng)).decoration(TextDecoration.BOLD, true));

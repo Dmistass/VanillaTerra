@@ -4,5 +4,8 @@ MapLinks:
   - Yandex
   - OSM
 
-# Offset added to the height when a player specifies a height in /tpll command
+# Whether to show the player's height (Y-level + HeightOffset) in the action bar
+ShowHeightInActionBar: true
+
+# Offset added to the height display and when a player specifies a height in /tpll command
 HeightOffset: 0
