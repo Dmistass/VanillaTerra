@@ -92,7 +92,7 @@ public class Tpll implements CommandExecutor {
                             .color(NamedTextColor.RED));
                     return true;
                 }
-                altitude = highest;
+                altitude = highest + 1;
             } else {
                 altitude -= VanillaTerra.config().getInt("HeightOffset", 0);
             }

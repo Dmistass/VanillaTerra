@@ -21,8 +21,6 @@ public class VanillaTerra extends JavaPlugin {
         getCommand("distortion").setExecutor(new Distortion());
         getCommand("vt-reload").setExecutor(new Reload());
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
-        getConfig().options().copyDefaults(true);
-        saveConfig();
     }
 
     public static void sendComponent(CommandSender commandSender, Component component) {
