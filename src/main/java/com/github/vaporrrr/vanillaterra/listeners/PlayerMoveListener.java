@@ -3,6 +3,7 @@ package com.github.vaporrrr.vanillaterra.listeners;
 import com.github.vaporrrr.vanillaterra.VanillaTerra;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,8 +16,12 @@ public class PlayerMoveListener implements Listener {
             return;
         }
         Player player = event.getPlayer();
-        int heightOffset = VanillaTerra.config().getInt("HeightOffset", 0);
-        int height = (int) Math.floor(player.getLocation().getY()) - heightOffset;
+        ConfigurationSection offsetSection = VanillaTerra.config().getConfigurationSection("Offset." + player.getWorld().getName());
+        int worldOffset = 0;
+        if (offsetSection != null) {
+            worldOffset = offsetSection.getInt("y", 0);
+        }
+        int height = (int) Math.floor(player.getLocation().getY()) - worldOffset;
         player.sendActionBar(Component.text(height + "m"));
     }
 }

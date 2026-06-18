@@ -7,6 +7,16 @@ MapLinks:
 # Whether to show the player's height in the action bar
 ShowHeightInActionBar: false
 
-# Offset added to the height display and when a player specifies a height in /tpll command
-# With an offset of -1024, the true zero altitude on server will be -1024.
-HeightOffset: 0
+# Offset for x, y, z when teleporting, configurable per world.
+# Key is world name, value contains x, y, z offsets.
+# If a world is not listed, all offsets default to 0.
+# With y offset of -1024, the true zero altitude on server will be -1024.
+Offset:
+  world:
+    x: 0
+    y: 0
+    z: 0
+  world_plus:
+    x: 0
+    y: 0
+    z: 0

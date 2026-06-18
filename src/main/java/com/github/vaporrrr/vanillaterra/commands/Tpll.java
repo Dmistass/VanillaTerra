@@ -19,6 +19,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import org.bukkit.configuration.ConfigurationSection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -94,7 +95,18 @@ public class Tpll implements CommandExecutor {
                 }
                 altitude = highest + 1;
             } else {
-                altitude -= VanillaTerra.config().getInt("HeightOffset", 0);
+                ConfigurationSection offsetSection = VanillaTerra.config().getConfigurationSection("Offset." + player.getWorld().getName());
+                int worldOffsetX = 0;
+                int worldOffsetY = 0;
+                int worldOffsetZ = 0;
+                if (offsetSection != null) {
+                    worldOffsetX = offsetSection.getInt("x", 0);
+                    worldOffsetY = offsetSection.getInt("y", 0);
+                    worldOffsetZ = offsetSection.getInt("z", 0);
+                }
+                c[0] -= worldOffsetX;
+                altitude -= worldOffsetY;
+                c[1] -= worldOffsetZ;
             }
             TextComponent textComponent = Component.text("Teleporting to ")
                     .color(NamedTextColor.GRAY)
