@@ -104,9 +104,9 @@ public class Tpll implements CommandExecutor {
                     worldOffsetY = offsetSection.getInt("y", 0);
                     worldOffsetZ = offsetSection.getInt("z", 0);
                 }
-                c[0] -= worldOffsetX;
+                c[0] += worldOffsetX;
                 altitude += worldOffsetY;
-                c[1] -= worldOffsetZ;
+                c[1] += worldOffsetZ;
             }
             TextComponent textComponent = Component.text("Teleporting to ")
                     .color(NamedTextColor.GRAY)
